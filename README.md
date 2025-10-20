@@ -16,17 +16,18 @@ gcc -O2 -std=c99 serial/kmeans_1d_naive.c -o kmeans_1d_naive -lm
 🔹 OpenMP
 ```bash```
 gcc -O2 -fopenmp -std=c99 openmp/kmeans_1d_omp.c -o kmeans_1d_omp -lm
-OMP_NUM_THREADxS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv
+export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv
 
 ## Resultados e métricas
 SSE (Sum of Squared Errors)  
 Tempo total de execução (ms)  
-Speedup e throughput em cada abordagem  
+Speedup, Eficiência e Throughput em cada abordagem  
+
 
 ## Grupo
 -Arissa Yumi Chikami  
 -Júlia Harue Katsurayama  
--Robert Ângelo de Souza Santos  
+-Robert Angelo de Souza Santos  
 
 ## Disciplina
 
