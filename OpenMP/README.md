@@ -10,8 +10,8 @@ openmp/ → versão paralela com OpenMP (CPU)
 ## Compilação e execução
 🔹 OpenMP
 ```bash```
-gcc -O2 -fopenmp -std=c99 openmp/kmeans_1d_omp.c -o kmeans_1d_omp -lm
-export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv  
+gcc -O2 -fopenmp -std=c99 openmp/kmeans_1d_omp.c -o kmeans_1d_omp -lm  
+export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv    
 
 ## Mudar de static para dynamic
 - **Static:** Cada thread recebe um bloco fixo de iterações no início.  
