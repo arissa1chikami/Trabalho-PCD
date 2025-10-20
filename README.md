@@ -3,9 +3,9 @@ Implementação do algoritmo K-Means 1D com paralelização progressiva utilizan
 Projeto da disciplina de Programação Concorrente e Distribuída.
 
 ## Estrutura do projeto
-serial/ → versão sequencial (baseline)
-openmp/ → versão paralela com OpenMP (CPU)
-- (as versões CUDA e MPI serão adicionadas posteriormente)
+serial/ → versão sequencial (baseline)  
+openmp/ → versão paralela com OpenMP (CPU)  
+- (as versões CUDA e MPI serão adicionadas posteriormente)  
 
 ## Compilação e execução
 🔹 Sequencial
@@ -19,18 +19,21 @@ gcc -O2 -fopenmp -std=c99 openmp/kmeans_1d_omp.c -o kmeans_1d_omp -lm
 OMP_NUM_THREADxS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv
 
 ## Resultados e métricas
-SSE (Sum of Squared Errors)
-Tempo total de execução (ms)
-Speedup e throughput em cada abordagem
+SSE (Sum of Squared Errors)  
+Tempo total de execução (ms)  
+Speedup e throughput em cada abordagem  
 
 ## Grupo
--Arissa Yumi Chikami
--Júlia Harue Katsurayama
--Robert Ângelo de Souza Santos
+-Arissa Yumi Chikami  
+-Júlia Harue Katsurayama  
+-Robert Ângelo de Souza Santos  
 
 ## Disciplina
-Programação Concorrente e Distribuída (PCD)
-Profs. Álvaro e Denise — Turmas I e N
-Universidade Federal de São Paulo - Campus São José dos Campos
+
+Programação Concorrente e Distribuída (PCD)  
+Profs. Álvaro e Denise — Turmas I e N  
+Universidade Federal de São Paulo - Campus São José dos 
+Campos  
+
 
 
