@@ -21,7 +21,7 @@ export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv
 ## Resultados e métricas
 SSE (Sum of Squared Errors)  
 Tempo total de execução (ms)  
-Speedup, Eficiência e Throughput em cada abordagem  
+Speedup e Eficiência  em cada abordagem  
 
 
 ## Grupo

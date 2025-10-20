@@ -8,8 +8,8 @@ openmp/ → versão paralela com OpenMP (CPU)
 - (as versões CUDA e MPI serão adicionadas posteriormente)  
 
 ## Compilação e execução
-🔹 Sequencial
-```bash```
+🔹 Sequencial  
+```bash```  
 gcc -O2 -std=c99 serial/kmeans_1d_naive.c -o kmeans_1d_naive -lm  
 ./kmeans_1d_naive dados.csv centroides_iniciais.csv  
 

@@ -8,8 +8,8 @@ openmp/ → versão paralela com OpenMP (CPU)
 - (as versões CUDA e MPI serão adicionadas posteriormente)  
 
 ## Compilação e execução
-🔹 OpenMP
-```bash```
+🔹 OpenMP  
+```bash```  
 gcc -O2 -fopenmp -std=c99 openmp/kmeans_1d_omp.c -o kmeans_1d_omp -lm  
 export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv    
 
@@ -28,7 +28,7 @@ export OMP_NUM_THREADS=4 ./kmeans_1d_omp dados.csv centroides_iniciais.csv
 ## Resultados e métricas
 SSE (Sum of Squared Errors)  
 Tempo total de execução (ms)  
-Speedup, Eficiência e Throughput em cada abordagem  
+Speedup e Eficiência em cada abordagem  
 
 
 ## Grupo
