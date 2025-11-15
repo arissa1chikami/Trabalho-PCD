@@ -11,23 +11,17 @@ cuda/ → versão paralela com CUDA (GPU)
 ## Configuração do ambiente (Google Colaboratory)
 🔹 CUDA  
 ```bash```  
-!pip install git+https://github.com/lesc-ufv/cad4u.git &> /dev/null
-
-!git clone https://github.com/lesc-ufv/cad4u &> /dev/null
-
-%load_ext plugin
-
-!git clone https://github.com/NVIDIA/cuda-samples.git
-
-%cd cuda-samples/Samples/1_Utilities/deviceQuery
-
+!pip install git+https://github.com/lesc-ufv/cad4u.git &> /dev/null  
+!git clone https://github.com/lesc-ufv/cad4u &> /dev/null  
+%load_ext plugin  
+!git clone https://github.com/NVIDIA/cuda-samples.git  
+%cd cuda-samples/Samples/1_Utilities/deviceQuery  
 !make
 
 ## Compilação e execução
 🔹 CUDA  
 ```bash```  
-!nvcc -arch=sm_75 -O2 kmeans_1d_cuda.cu -o kmeans_cuda -lm
-
+!nvcc -arch=sm_75 -O2 kmeans_1d_cuda.cu -o kmeans_cuda -lm  
 !./kmeans_cuda dados.csv centroides_iniciais.csv 50 1e-6 1024 assign.csv centroids.csv   
 
 ## Mudar tamanho do bloco
@@ -50,7 +44,7 @@ cuda/ → versão paralela com CUDA (GPU)
 ## Resultados e métricas
 SSE (Sum of Squared Errors)  
 Tempo total de execução (ms)  
-Speedup e Throughput
+Speedup e Throughput  
 Tempos H2D, D2H, kernel
 
 
