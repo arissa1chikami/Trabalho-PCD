@@ -32,13 +32,13 @@ cuda/ → versão paralela com CUDA (GPU)
 // Tamanho do bloco - 128  
 !./kmeans_cuda dados.csv centroides_iniciais.csv 50 1e-6 128 assign.csv centroids.csv
 
-// Tamanho do bloco - 256 
+// Tamanho do bloco - 256  
 !./kmeans_cuda dados.csv centroides_iniciais.csv 50 1e-6 256 assign.csv centroids.csv
 
-// Tamanho do bloco - 512 
+// Tamanho do bloco - 512  
 !./kmeans_cuda dados.csv centroides_iniciais.csv 50 1e-6 512 assign.csv centroids.csv
 
-// Tamanho do bloco - 1024 
+// Tamanho do bloco - 1024  
 !./kmeans_cuda dados.csv centroides_iniciais.csv 50 1e-6 1024 assign.csv centroids.csv
 
 ## Resultados e métricas
