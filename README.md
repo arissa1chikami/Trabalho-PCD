@@ -15,7 +15,7 @@ cuda/ → versão paralela com CUDA (GPU)
 
 ## Disciplina
 Programação Concorrente e Distribuída (PCD)  
-Profs. Álvaro e Denise — Turma I
+Profs. Álvaro e Denise — Turma I  
 Universidade Federal de São Paulo - Campus São José dos 
 Campos  
 
