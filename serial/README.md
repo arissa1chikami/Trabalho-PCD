@@ -1,12 +1,12 @@
 # Trabalho-PCD — K-Means 1D Paralelo
-Implementação do algoritmo K-Means 1D com paralelização progressiva utilizando OpenMP, CUDA e futuramente MPI.  
+Implementação do algoritmo K-Means 1D com paralelização progressiva utilizando OpenMP, CUDA e MPI.  
 Projeto da disciplina de Programação Concorrente e Distribuída.
 
 ## Estrutura do projeto
 serial/ → versão sequencial (baseline)  
 openmp/ → versão paralela com OpenMP (CPU)  
 cuda/ → versão paralela com CUDA (GPU)  
-- (a versão MPI será adicionada posteriormente)   
+mpi/ → versão paralela com MPI   
 
 ## Compilação e execução
 🔹 Sequencial  

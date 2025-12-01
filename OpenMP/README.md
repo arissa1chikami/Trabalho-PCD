@@ -6,7 +6,7 @@ Projeto da disciplina de Programação Concorrente e Distribuída.
 serial/ → versão sequencial (baseline)  
 openmp/ → versão paralela com OpenMP (CPU)  
 cuda/ → versão paralela com CUDA (GPU)  
-- (a versão MPI será adicionada posteriormente)  
+mpi/ → versão paralela com MPI  
 
 ## Compilação e execução
 🔹 OpenMP  
