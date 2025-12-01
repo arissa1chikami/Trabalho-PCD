@@ -1,0 +1,544 @@
+Resultado dos testes MPI
+==========================
+
+Rodando com 1 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 2436.589 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.000236 s
+MPI_Allreduce: 0.000041 s
+MPI_Bcast:     0.000012 s
+Total comunicação: 0.000290 s (0.01% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 4488.459 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.000263 s
+MPI_Allreduce: 0.000068 s
+MPI_Bcast:     0.000015 s
+Total comunicação: 0.000345 s (0.01% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 2400.897 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.000212 s
+MPI_Allreduce: 0.000046 s
+MPI_Bcast:     0.000012 s
+Total comunicação: 0.000270 s (0.01% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Rodando com 2 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1362.290 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.010712 s
+MPI_Allreduce: 0.000565 s
+MPI_Bcast:     0.000106 s
+Total comunicação: 0.011383 s (0.84% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1388.055 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.006852 s
+MPI_Allreduce: 0.000522 s
+MPI_Bcast:     0.000097 s
+Total comunicação: 0.007471 s (0.54% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1407.306 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.008203 s
+MPI_Allreduce: 0.000534 s
+MPI_Bcast:     0.000119 s
+Total comunicação: 0.008856 s (0.63% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Rodando com 3 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251151 | Tempo total: 2442.359 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.360666 s
+MPI_Allreduce: 0.002167 s
+MPI_Bcast:     0.000352 s
+Total comunicação: 0.363185 s (14.87% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251151 | Tempo total: 1201.160 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.175717 s
+MPI_Allreduce: 0.000828 s
+MPI_Bcast:     0.000154 s
+Total comunicação: 0.176700 s (14.71% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251151 | Tempo total: 1481.855 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.216171 s
+MPI_Allreduce: 0.001108 s
+MPI_Bcast:     0.000173 s
+Total comunicação: 0.217453 s (14.67% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Rodando com 4 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 967.770 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.144779 s
+MPI_Allreduce: 0.002281 s
+MPI_Bcast:     0.000103 s
+Total comunicação: 0.147162 s (15.21% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 992.535 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.136160 s
+MPI_Allreduce: 0.000694 s
+MPI_Bcast:     0.000181 s
+Total comunicação: 0.137034 s (13.81% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1010.396 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.154436 s
+MPI_Allreduce: 0.000719 s
+MPI_Bcast:     0.000123 s
+Total comunicação: 0.155279 s (15.37% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Rodando com 5 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1108.504 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.089876 s
+MPI_Allreduce: 0.001322 s
+MPI_Bcast:     0.000192 s
+Total comunicação: 0.091390 s (8.24% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1180.756 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.095460 s
+MPI_Allreduce: 0.000988 s
+MPI_Bcast:     0.000218 s
+Total comunicação: 0.096667 s (8.19% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1126.065 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.086589 s
+MPI_Allreduce: 0.000985 s
+MPI_Bcast:     0.000213 s
+Total comunicação: 0.087786 s (7.80% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Rodando com 6 processos...
+-----------------------------
+Execução 1:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1100.979 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.086868 s
+MPI_Allreduce: 0.001182 s
+MPI_Bcast:     0.000210 s
+Total comunicação: 0.088261 s (8.02% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 2:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1130.621 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.095328 s
+MPI_Allreduce: 0.001461 s
+MPI_Bcast:     0.000382 s
+Total comunicação: 0.097171 s (8.59% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+Execução 3:
+K-means 1D (MPI)
+N=1000000 K=16 max_iter=50 eps=0.0001
+Iterações: 50 | SSE final: 9603289.251152 | Tempo total: 1250.615 ms
+
+--- TEMPOS DE COMUNICAÇÃO ---
+MPI_Reduce:    0.112881 s
+MPI_Allreduce: 0.004288 s
+MPI_Bcast:     0.000230 s
+Total comunicação: 0.117400 s (9.39% do tempo)
+
+Centroides finais:
+C[0] = 14.884908
+C[1] = 33.561185
+C[2] = 62.539506
+C[3] = 93.639603
+C[4] = 24.210279
+C[5] = 43.048002
+C[6] = 52.702490
+C[7] = 5.621441
+C[8] = 104.576282
+C[9] = 82.982890
+C[10] = 72.605597
+C[11] = 115.832632
+C[12] = 127.389310
+C[13] = 139.271903
+C[14] = 151.437348
+C[15] = 163.792112
+
+
+Fim dos testes!
