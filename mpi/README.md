@@ -10,14 +10,14 @@ mpi/ → versão paralela com MPI
 
 
 ## Requisitos
-🔹 Hardware
-Um ou mais computadores conectados na mesma rede.
-Cada máquina deve possuir o MPI instalado.
+🔹 Hardware  
+Um ou mais computadores conectados na mesma rede.  
+Cada máquina deve possuir o MPI instalado.  
 
-🔹 Software
-OpenMPI
-Compilador C (ex.: ```gcc```)
-Sistema operacional Linux (nativo ou WSL)
+🔹 Software  
+OpenMPI  
+Compilador C (ex.: ```gcc```)  
+Sistema operacional Linux (nativo ou WSL)  
 
 
 ## Compilação
