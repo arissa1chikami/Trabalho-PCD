@@ -47,12 +47,6 @@ Passo 3 — Executar no cluster
 // Quantidade de processos - 1  
 ```mpirun -np 1 -hostfile hosts.txt ./kmeans_1d_mpi dados.csv centroides_iniciais.csv```  
 
-// Quantidade de processos - 1  
-```mpirun -np 1 -hostfile hosts.txt ./kmeans_1d_mpi dados.csv centroides_iniciais.csv```  
-
-// Quantidade de processos - 1  
-```mpirun -np 1 -hostfile hosts.txt ./kmeans_1d_mpi dados.csv centroides_iniciais.csv```  
-
 // Quantidade de processos - 2  
 ```mpirun -np 2 -hostfile hosts.txt ./kmeans_1d_mpi dados.csv centroides_iniciais.csv```  
 
