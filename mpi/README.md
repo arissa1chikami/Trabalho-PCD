@@ -35,12 +35,10 @@ Na máquina principal:
 ```ssh-copy-id usuario@IP_da_outra_maquina```  
 Teste:  
 ```ssh usuario@IP_da_outra_maquina```  
-
 Passo 2 — Criar o arquivo ```hosts.txt```  
 Exemplo:  
 ```192.168.1.10 slots=4```  
 ```192.168.1.11 slots=4```  
-
 Passo 3 — Executar no cluster  
 ```mpirun -np 4 -hostfile hosts.txt ./kmeans_1d_mpi dados.csv centroides_iniciais.csv```  
 
