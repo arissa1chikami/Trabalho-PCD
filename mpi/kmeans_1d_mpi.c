@@ -1,15 +1,10 @@
-//mpirun -np 1 ./kmeans_1d_mpi dados.csv centroides_iniciais.csv
-// cd /mnt/c/PCD/Trabalho-PCD/MPI
-
 #include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-/* ---------------------------------------------------
-   Função que lê CSV simples (1 coluna)
-   ---------------------------------------------------*/
+// função ler csv
 double* read_csv_1col(const char *path, int *n_out, int rank)
 {
     double *A = NULL;
@@ -45,9 +40,6 @@ double* read_csv_1col(const char *path, int *n_out, int rank)
     return A;
 }
 
-/* ---------------------------------------------------
-   Escrever outputs do sequencial (apenas rank 0)
-   ---------------------------------------------------*/
 void write_assign_csv(const char *path, int *assign, int N)
 {
     FILE *f = fopen(path, "w");
@@ -66,9 +58,6 @@ void write_centroids_csv(const char *path, double *C, int K)
     fclose(f);
 }
 
-/* ---------------------------------------------------
-   K-means MPI
-   ---------------------------------------------------*/
 int main(int argc, char **argv)
 {
     MPI_Init(&argc, &argv);
@@ -148,7 +137,7 @@ int main(int argc, char **argv)
             cnt_local[best] += 1;
         }
 
-        /* REDUÇÕES MPI */
+        // Reduções MPI 
         double t0 = MPI_Wtime();
         double sse_global = 0.0;
         MPI_Reduce(&sse_local, &sse_global, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
@@ -178,7 +167,7 @@ int main(int argc, char **argv)
         time_bcast += (MPI_Wtime() - t0);
     }
 
-    /* ---------------- GATHER assignments (corrigido) ---------------- */
+    // GATHER assignments
     int *recvcounts = NULL;
     int *displs = NULL;
 
@@ -189,18 +178,16 @@ int main(int argc, char **argv)
 
     int local_count = localN;
 
-    /* Cada processo envia seu tamanho */
+    
     MPI_Gather(&local_count, 1, MPI_INT,
                recvcounts, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
-    /* Rank 0 calcula deslocamentos */
     if (rank == 0) {
         displs[0] = 0;
         for (int i = 1; i < P; i++)
             displs[i] = displs[i-1] + recvcounts[i-1];
     }
 
-    /* Gatherv agora funciona com blocos de tamanho diferente */
     MPI_Gatherv(assign_local, local_count, MPI_INT,
                 assign_full, recvcounts, displs, MPI_INT,
                 0, MPI_COMM_WORLD);
@@ -213,7 +200,7 @@ int main(int argc, char **argv)
     double t_total = MPI_Wtime() - t_global_start;
     total_comm = time_reduce + time_allreduce + time_bcast;
 
-    /* PRINTS IGUAIS AO SEQUENCIAL */
+    //resultados
     if (rank == 0) {
         printf("K-means 1D (MPI)\n");
         printf("N=%d K=%d max_iter=%d eps=%g\n", N, K, max_iter, eps);
