@@ -7,6 +7,7 @@
        ./kmeans_1d_omp dados.csv centroides_iniciais.csv [max_iter=50] [eps=1e-4] [assign.csv] [centroids.csv]
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -70,7 +71,7 @@ static double assignment_step_1d(const double *X, const double *C,
                                  int *assign, int N, int K)
 {
     double sse = 0.0;
-    #pragma omp parallel for reduction(+:sse) schedule(dynamic,100000)
+    #pragma omp parallel for reduction(+:sse) schedule(runtime)
     for(int i=0;i<N;i++){
         int best = 0;
         double bestd = (X[i]-C[0])*(X[i]-C[0]);
@@ -99,7 +100,7 @@ static void update_step_1d(const double *X, double *C, const int *assign, int N,
     #pragma omp parallel
     {
         int tid = omp_get_thread_num();
-        #pragma omp for schedule(dynamic,100000)
+        #pragma omp for schedule(runtime)
         for(int i=0;i<N;i++){
             int a = assign[i];
             cnt_thread[tid][a]++;
