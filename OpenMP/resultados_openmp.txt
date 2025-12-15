@@ -1,0 +1,560 @@
+Resultados OpenMP - K-Means 1D
+=========================================
+
+Schedule: static | Chunk: 1000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7492.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7640.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7513.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 6963.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4045.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 6424.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 3214.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5598.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2831.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 3788.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 3247.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2159.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 4723.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 1817.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 2031.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2087.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2102.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2123.000 ms
+
+
+Schedule: static | Chunk: 10000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7705.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8673.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 9325.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 7487.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4116.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 6672.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4107.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4552.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4797.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2873.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3039.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3080.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2969.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2930.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2948.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2985.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3030.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2988.000 ms
+
+
+Schedule: static | Chunk: 100000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8374.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8285.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 10178.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 10688.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 11437.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 11457.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 11514.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8993.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7591.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7588.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7528.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7781.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7577.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7551.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 10595.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7593.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7676.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7590.000 ms
+
+
+Schedule: dynamic | Chunk: 1000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8174.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 11504.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 9994.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 4047.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5075.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5837.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121922.502236 | Tempo: 3812.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3785.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3874.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3055.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2993.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 3085.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2595.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2602.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2634.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2494.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2521.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 11 | SSE final: 121919.759379 | Tempo: 2648.000 ms
+
+
+Schedule: dynamic | Chunk: 10000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8794.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8804.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8976.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5310.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5410.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 5148.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 4974.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 4898.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 4755.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2890.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121919.759379 | Tempo: 2858.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2918.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2860.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2897.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2921.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2915.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2948.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121954.852712 | Tempo: 2970.000 ms
+
+
+Schedule: dynamic | Chunk: 100000
+-----------------------------------------
+Threads=1 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8229.000 ms
+
+Threads=1 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8449.000 ms
+
+Threads=1 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=1
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8548.000 ms
+
+Threads=2 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8582.000 ms
+
+Threads=2 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8685.000 ms
+
+Threads=2 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=2
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8667.000 ms
+
+Threads=3 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8917.000 ms
+
+Threads=3 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 9985.000 ms
+
+Threads=3 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=3
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8981.000 ms
+
+Threads=4 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 9052.000 ms
+
+Threads=4 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 9437.000 ms
+
+Threads=4 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=4
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 11460.000 ms
+
+Threads=5 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 10628.000 ms
+
+Threads=5 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 7774.000 ms
+
+Threads=5 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=5
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8719.000 ms
+
+Threads=6 | Execução=1
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8355.000 ms
+
+Threads=6 | Execução=2
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8146.000 ms
+
+Threads=6 | Execução=3
+K-means 1D (OpenMP)
+N=40000 K=20000 Threads=6
+Iterações: 10 | SSE final: 121957.595569 | Tempo: 8233.000 ms
+
