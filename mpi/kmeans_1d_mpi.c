@@ -1,18 +1,27 @@
+//mpicc -O2 -std=c99 kmeans_1d_mpi.c -o kmeans_1d_mpi -lm
+//mpirun -np P ./kmeans_1d_mpi dados.csv centroides_iniciais.csv
+
 #include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-// função ler csv
+
+//ler dados
 double* read_csv_1col(const char *path, int *n_out, int rank)
 {
     double *A = NULL;
     int R = 0;
 
+
     if (rank == 0) {
         FILE *f = fopen(path, "r");
-        if (!f) { printf("Erro ao abrir %s\n", path); MPI_Abort(MPI_COMM_WORLD,1); }
+        if (!f) {
+            printf("Erro ao abrir %s\n", path);
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
+
 
         char line[256];
         while (fgets(line, sizeof(line), f)) {
@@ -21,25 +30,32 @@ double* read_csv_1col(const char *path, int *n_out, int rank)
         }
         rewind(f);
 
+
         A = malloc(R * sizeof(double));
         for (int i = 0; i < R; i++) {
-            if (!fgets(line, sizeof(line), f)) break;
+            fgets(line, sizeof(line), f);
             A[i] = atof(line);
         }
         fclose(f);
     }
 
+
     MPI_Bcast(&R, 1, MPI_INT, 0, MPI_COMM_WORLD);
+
 
     if (rank != 0)
         A = malloc(R * sizeof(double));
 
+
     MPI_Bcast(A, R, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
 
     *n_out = R;
     return A;
 }
 
+
+//reusltados
 void write_assign_csv(const char *path, int *assign, int N)
 {
     FILE *f = fopen(path, "w");
@@ -48,6 +64,7 @@ void write_assign_csv(const char *path, int *assign, int N)
         fprintf(f, "%d\n", assign[i]);
     fclose(f);
 }
+
 
 void write_centroids_csv(const char *path, double *C, int K)
 {
@@ -58,13 +75,16 @@ void write_centroids_csv(const char *path, double *C, int K)
     fclose(f);
 }
 
+
 int main(int argc, char **argv)
 {
     MPI_Init(&argc, &argv);
 
+
     int rank, P;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &P);
+
 
     if (argc < 3) {
         if (rank == 0)
@@ -73,81 +93,92 @@ int main(int argc, char **argv)
         return 1;
     }
 
+
     const char *pathX = argv[1];
     const char *pathC = argv[2];
 
-    const char *assign_out = "assign_mpi.csv";
-    const char *cent_out   = "centroids_mpi.csv";
 
     int max_iter = 50;
     double eps = 1e-4;
+
 
     int N, K;
     double *X = read_csv_1col(pathX, &N, rank);
     double *C = read_csv_1col(pathC, &K, rank);
 
+
     int chunk = N / P;
     int ini = rank * chunk;
-    int fim = (rank == P-1) ? N : ini + chunk;
+    int fim = (rank == P - 1) ? N : ini + chunk;
     int localN = fim - ini;
 
-    int *assign_local = malloc(localN * sizeof(int));
-    int *assign_full  = NULL;
-    if (rank == 0) assign_full = malloc(N * sizeof(int));
 
-    double *sum_local  = malloc(K * sizeof(double));
+    int *assign_local = malloc(localN * sizeof(int));
+    int *assign_full = NULL;
+    if (rank == 0)
+        assign_full = malloc(N * sizeof(int));
+
+
+    double *sum_local = malloc(K * sizeof(double));
     double *sum_global = malloc(K * sizeof(double));
-    int *cnt_local     = malloc(K * sizeof(int));
-    int *cnt_global    = malloc(K * sizeof(int));
+    int *cnt_local = malloc(K * sizeof(int));
+    int *cnt_global = malloc(K * sizeof(int));
+
 
     double prev_sse = 1e300;
     int iters = 0;
+    int stop = 0;
 
-    double t_global_start = MPI_Wtime();
 
-    double total_comm = 0.0;
-    double time_allreduce = 0.0;
-    double time_reduce = 0.0;
-    double time_bcast = 0.0;
+    double t_start = MPI_Wtime();
+    double time_reduce = 0.0, time_allreduce = 0.0, time_bcast = 0.0;
+
 
     for (int it = 0; it < max_iter; it++) {
         iters = it + 1;
+        stop = 0;
 
-        for (int c = 0; c < K; c++) {
-            sum_local[c] = 0.0;
-            cnt_local[c] = 0;
-        }
+
+        memset(sum_local, 0, K * sizeof(double));
+        memset(cnt_local, 0, K * sizeof(int));
+
 
         double sse_local = 0.0;
 
+
         for (int i = 0; i < localN; i++) {
             double xi = X[ini + i];
-
             int best = 0;
             double bestd = (xi - C[0]) * (xi - C[0]);
 
+
             for (int c = 1; c < K; c++) {
                 double d = (xi - C[c]) * (xi - C[c]);
-                if (d < bestd) { bestd = d; best = c; }
+                if (d < bestd) {
+                    bestd = d;
+                    best = c;
+                }
             }
+
 
             assign_local[i] = best;
             sse_local += bestd;
             sum_local[best] += xi;
-            cnt_local[best] += 1;
+            cnt_local[best]++;
         }
 
-        // Reduções MPI 
-        double t0 = MPI_Wtime();
+
         double sse_global = 0.0;
+        double t0 = MPI_Wtime();
         MPI_Reduce(&sse_local, &sse_global, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
-        time_reduce += (MPI_Wtime() - t0);
+        time_reduce += MPI_Wtime() - t0;
+
 
         t0 = MPI_Wtime();
         MPI_Allreduce(sum_local, sum_global, K, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
         MPI_Allreduce(cnt_local, cnt_global, K, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
-        double t_ar = MPI_Wtime() - t0;
-        time_allreduce += t_ar;
+        time_allreduce += MPI_Wtime() - t0;
+
 
         if (rank == 0) {
             for (int c = 0; c < K; c++) {
@@ -157,69 +188,71 @@ int main(int argc, char **argv)
                     C[c] = X[0];
             }
 
+
             double rel = fabs(sse_global - prev_sse) / prev_sse;
-            if (rel < eps) break;
+            if (rel < eps)
+                stop = 1;
             prev_sse = sse_global;
         }
 
+
         t0 = MPI_Wtime();
+        MPI_Bcast(&stop, 1, MPI_INT, 0, MPI_COMM_WORLD);
         MPI_Bcast(C, K, MPI_DOUBLE, 0, MPI_COMM_WORLD);
-        time_bcast += (MPI_Wtime() - t0);
+        time_bcast += MPI_Wtime() - t0;
+
+
+        if (stop)
+            break;
     }
 
-    // GATHER assignments
-    int *recvcounts = NULL;
-    int *displs = NULL;
+
+    /* -------- GATHER assignments -------- */
+    int *recvcounts = NULL, *displs = NULL;
+
 
     if (rank == 0) {
         recvcounts = malloc(P * sizeof(int));
         displs = malloc(P * sizeof(int));
     }
 
-    int local_count = localN;
 
-    
-    MPI_Gather(&local_count, 1, MPI_INT,
+    MPI_Gather(&localN, 1, MPI_INT,
                recvcounts, 1, MPI_INT, 0, MPI_COMM_WORLD);
+
 
     if (rank == 0) {
         displs[0] = 0;
         for (int i = 1; i < P; i++)
-            displs[i] = displs[i-1] + recvcounts[i-1];
+            displs[i] = displs[i - 1] + recvcounts[i - 1];
     }
 
-    MPI_Gatherv(assign_local, local_count, MPI_INT,
+
+    MPI_Gatherv(assign_local, localN, MPI_INT,
                 assign_full, recvcounts, displs, MPI_INT,
                 0, MPI_COMM_WORLD);
 
-    if (rank == 0) {
-        free(recvcounts);
-        free(displs);
-    }
 
-    double t_total = MPI_Wtime() - t_global_start;
-    total_comm = time_reduce + time_allreduce + time_bcast;
+    double t_total = MPI_Wtime() - t_start;
 
-    //resultados
+
     if (rank == 0) {
         printf("K-means 1D (MPI)\n");
-        printf("N=%d K=%d max_iter=%d eps=%g\n", N, K, max_iter, eps);
+        printf("N=%d K=%d Processos=%d\n", N, K, P);
         printf("Iterações: %d | SSE final: %.6f | Tempo total: %.3f ms\n",
                iters, prev_sse, t_total * 1000.0);
+
 
         printf("\n--- TEMPOS DE COMUNICAÇÃO ---\n");
         printf("MPI_Reduce:    %.6f s\n", time_reduce);
         printf("MPI_Allreduce: %.6f s\n", time_allreduce);
         printf("MPI_Bcast:     %.6f s\n", time_bcast);
-        printf("Total comunicação: %.6f s (%.2f%% do tempo)\n",
-               total_comm, 100.0 * total_comm / t_total);
 
-        printf("\nCentroides finais:\n");
-        for (int c = 0; c < K; c++) printf("C[%d] = %.6f\n", c, C[c]);
 
-        write_assign_csv(assign_out, assign_full, N);
-        write_centroids_csv(cent_out, C, K);
+        write_assign_csv("assign_mpi.csv", assign_full, N);
+        write_centroids_csv("centroids_mpi.csv", C, K);
     }
+
 
     free(assign_local);
     free(sum_local);
@@ -228,7 +261,12 @@ int main(int argc, char **argv)
     free(cnt_global);
     free(X);
     free(C);
-    if (rank == 0) free(assign_full);
+    if (rank == 0) {
+        free(assign_full);
+        free(recvcounts);
+        free(displs);
+    }
+
 
     MPI_Finalize();
     return 0;
